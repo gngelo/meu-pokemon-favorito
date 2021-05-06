@@ -1,0 +1,35 @@
+
+
+<div class="container">
+      <!--Cabeçalho-->
+  <div class="row bg-primary text-center">
+      <!--Titulo-->
+      <div class="text-white font-weight col-sm-12">
+        <h4>Meu Pokemon Favorito
+          <a routerLink="" class="text-white link float-right">Sair</a>
+        </h4>      
+      </div>
+  </div>    
+      <!--Titulo-->
+  <div class="container text-center mt-5">
+        <h4>Ola, {{ responseUsuario.trainer }}</h4>
+        <br>
+        <p>Este e seu pokemon favorito abaixo<br>
+          Na cidade de {{ responseUsuario.city }}, 
+          Estado de {{ responseUsuario.province}} 
+          faz 25 graus agora.</p>
+  </div>
+       <!--pokemon-->
+  <div class="container border py-2 my-2">
+        <!--imagem pokemon-->  
+        <div class="text-center mb-3">
+          <img src="{{ responseData.imageUrl }}" class="rounded" alt="...">
+        </div>
+      <h4>{{ responseData.pokemonName }} <!--recebe o nome pokemon-->
+        ({{ responseData.pokemonAlias }}) <!--recebe o alias do nome-->
+      </h4>
+      <p class="text-justify">{{ responseData.pokemonDescription }}</p><!--recebe a descrição do pokemon-->
+  </div>
+
+</div>
+
